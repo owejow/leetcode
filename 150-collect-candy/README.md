@@ -30,8 +30,10 @@ Constraints:
 
 simple_algorithm.algorithm : contains straightforward solution using O(n) extra space
 o_one_memory.algorithm : contains more complex solution with lots of edge cases requiring O(1) space.
+o_one_memory-elegant.algorithm : contains elegent O(1) space solution
 
 To run tests:
 
-python3 -m unittest ./tests/test-o-one-memory.py
 python3 -m unittest ./tests/test-simple-algorithm.py
+python3 -m unittest ./tests/test-o-one-memory.py
+python3 -m unittest ./tests/test-o-one-memory-elegant.py
