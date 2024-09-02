@@ -1,18 +1,12 @@
 class Solution(object):
-    def findMinArrowShots(self, points):
+    def reconstructQueue(self, people):
         """
         :type points: List[List[int]]
-        :rtype: int
+        :rtype: List[List[int]]
         """
 
-        points.sort(key=lambda x: x[1])
-
-        arrows = 0
-        test = float("-inf")
-
-        for p in points:
-            if p[0] > test:
-                arrows += 1
-                test = p[1]
-
-        return arrows
+        people.sort(key=lambda x: (-x[0], x[1]))
+        queue = []
+        for elem in people:
+            queue.insert(elem[1], elem)
+        return queue
